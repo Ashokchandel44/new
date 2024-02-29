@@ -10,24 +10,29 @@
 </head>
 
 <body>
-	<script>
-		function turnOnOff() {
-			let image = document.getElementById('Image');
-			if (image.src.match("ONbulb"))
-				image.src =
-"https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg";
-			else
-				image.src =
-"https://media.geeksforgeeks.org/wp-content/uploads/ONbulb.jpg";
-		}
-	</script>
+<script>
+    function turnOnOff() {
+        let image = document.getElementById('Image');
+        let button = document.getElementById('toggleButton');
+        
+        if (image.src.match("ONbulb")) {
+            image.src = "https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg";
+            button.textContent = "Turn On";
+        } else {
+            image.src = "https://media.geeksforgeeks.org/wp-content/uploads/ONbulb.jpg";
+            button.textContent = "Turn Off";
+        }
+    }
+</script>
 
-	<img id="Image" onclick="turnOnOff()" src=
-"https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg">
+<img id="Image" src="https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg">
+<button id="toggleButton" onclick="turnOnOff()">Turn On</button>
 
-	<p>
-		Click on the bulb to turn it ON and OFF
-	</p>
+<p>
+    Click the button to toggle the bulb.
+</p>
+
+	
 </body>
 
 </html>
