@@ -1,36 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-		content="width=device-width, 
-				initial-scale=1.0">
-	<title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infinite Loop Button Click</title>
 </head>
-
 <body>
+
+<button id="startLoop">Start Infinite Loop</button>
+
 <script>
-    function turnOnOff() {
-        let image = document.getElementById('Image');
-        let button = document.getElementById('toggleButton');
-        
-        if (image.src.match("ONbulb")) {
-            image.src = "https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg";
-            button.textContent = "Turn On";
-        } else {
-            image.src = "https://media.geeksforgeeks.org/wp-content/uploads/ONbulb.jpg";
-            button.textContent = "Turn Off";
-        }
+document.getElementById("startLoop").addEventListener("click", function() {
+    // This function will run when the button is clicked
+    while (true) {
+        // Infinite loop
+        console.log("Infinite loop is running...");
     }
+});
 </script>
 
-<img id="Image" src="https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg">
-<button id="toggleButton" onclick="turnOnOff()">Turn On</button>
-
-
-
-	
 </body>
-
 </html>
